@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+
+}
+html{
+    scroll-behavior: smooth;
+    transition: 1s;
+}
+body{
+    position: relative;
+    background-color: black;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.887);
+    transition: .5s;
+    padding: 1em;
+    position: fixed;
+    z-index: 99;
+}
+header .logo{
+    color: white;
+    font-family: 'Lacquer';
+}
+header .logo span{
+    color: red;
+    font-family: "Lacquer";
+}
+header .toggle{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+header .toggle:hover{
+    color: red;
+    transition: .5s;
+}
+.contain{
+    padding-top: 4em;
+    height: 100vh;
+    background-image: url('png/baground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.contain .konten{
+    position: relative;
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+    bottom: 5em;
+
+    
+}
+.contain .konten .title{
+    padding: 0.2em;
+    opacity: 1;
+
+    transition: opacity 0.5 ease-in-out, transform 0.5 ease-in-out;
+    
+}
+.contain .konten .title h1{
+    font-style: italic;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px black;
+}
+.animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+.contain .konten .title h2{
+    font-style: italic;
+    font-family: "Lacquer";
+    color: red;
+    text-shadow: 1px 1px 3px black;
+}
+.konten .title p{
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px black;
+}
+.contain .konten .title .btn{
+    background-color: red;
+    border: none;
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    padding: 0.5em 3em;
+    border-radius: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: .7rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 3px black;
+}
+.contain .konten .title .btn:hover{
+    /* background-color: rgb(161, 7, 7); */
+    animation: swing 0.5s ease;
+}
+@keyframes swing{
+    0%{
+        transform: rotate(0deg);
+    }20%{
+        transform: rotate(15deg);
+    }40%{
+        transform: rotate(-10deg);
+    }60%{
+        transform: rotate(5deg);
+    }80%{
+        transform: rotate(-5deg);
+    }100%{
+        transform: rotate(0deg);
+    }
+}
+/* side menu */
+.sidebar{
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    z-index: 9999;
+    width: 0;
+    transition: .5s;
+    overflow: hidden;
+}
+.sidebar .con h1{
+    font-family: "Lacquer";
+    font-size: 16px;
+}
+.sidebar .con span{
+    color: red;
+    font-family: "Lacquer";
+}
+.sidebar .con{
+    padding: 1em;
+    margin-left: 1em;
+    color: white;
+}
+.sidebar .con a{
+    text-decoration: none;
+    color: white;
+    font-family: "Lacquer";
+}
+.sidebar .con a:hover{
+    color: red;
+}
+
+/* info */
+.info,
+.sinopsis,
+.trailer,
+.about{
+    width: 85%;
+    margin: auto;
+    padding-top: 5em;
+    height: 100vh;
+    background-color: black;
+}
+
+.col-info{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2em;
+    position: relative;    
+}
+.info .col-info::before,
+.trailer .col-info::before,
+.sinopsis .col-info::before,
+.about .col-info::before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    border-bottom: 1px solid rgb(67, 67, 67);
+    width: 100%;
+}
+.sinopsis .col-info h1, 
+.trailer .col-info h1,
+.about .col-info h1{
+    font-family: "Lacquer";
+    font-size: 16px;
+    color: red;
+    width: 100%;
+    font-weight: normal;
+    margin: auto;
+    text-align: left;
+    
+}
+.info .col-info{
+    display: flex;
+    justify-content: space-between;
+}
+.info .col-info h1{
+    font-family: "Lacquer";
+    font-size: 16px;
+    color: red;
+    font-weight: normal;
+    
+}
+.col-info span{
+    font-size: 13px;
+}
+.info .wrapper{
+
+}
+.info .col-sub{
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.col-sub .text{
+    display: flex;
+    background-color: rgb(42, 42, 42);
+    justify-content: space-between;
+    width: 100%;
+    padding: .5em;
+    position: relative;
+}
+.info .col-sub  p{
+    padding: .5em 0;
+    font-size: 8px;
+    padding: .7em;
+}
+.col-sub #text::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    top: 0;
+    width: 4px;
+    right: 70%;
+}
+/* sinopsis */
+.sinopsis .wrapper .image img{
+    width: 100%;
+    margin: auto;
+    height:300px;
+    object-fit: cover;
+    padding-top: 2em;
+    
+}
+.sinopsis .wrapper{
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+.sinopsis .wrapper h1{
+    font-size: 13px;
+    padding: 2em 0;
+    text-align: left;
+    font-style: italic;
+}
+.sinopsis .wrapper p{
+    font-size: 11px;
+    margin: auto;
+    text-align: left;
+}
+
+/* trailer */
+.col-trailer .col-image{
+    position: relative;
+    margin: auto;
+    background-image: url('png/trailer.jpg');
+    width: 293px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.col-trailer .col-image img{
+    width: 150px;
+}
+.col-trailer .col-image p{
+    position: absolute;
+    bottom: 1em;
+    color: white;
+    left: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+.penutup{
+    padding-top: 2em;
+    width: 100%;
+}
+.penutup h1{
+    color: white;
+    font-size: 14px;
+    font-family: "Lacquer";
+}
+.penutup .end{
+    display: flex;
+    padding-top: 2em;
+}
+.penutup .end i{
+    margin-right: .6em;
+    color: rgb(21, 212, 21);
+    border-radius: 50%;
+    border: 2px solid rgb(21, 212, 21);;
+}
+.penutup p{
+    padding-top: 2em;
+    color: white;
+    font-size: 11px;
+}
+
+/* about */
+.about{
+    position: relative;
+}
+.about .text {
+    color: white;
+    width: 100%;
+    padding-top: 1em;
+}
+.col-info-text{
+    color: rgb(255, 255, 255);
+    display: flex;
+    font-size: 7px;
+    padding-bottom: 2em;
+    position: relative;  
+}
+.about .text p{
+    font-size: 11px;
+}
+.col-text{
+    margin: auto;
+}
+.col-text .season{
+    padding:  2em 0;
+}
+.ova .link{
+
+} 
+.col-text .ova .link a,
+.col-text .season .link a{
+    margin-top: 1em;
+    text-decoration: none;
+    color: aqua;
+    font-size: 11px;
+}
+.col-text .season .link a:hover,
+.col-text .ova .link a:hover{
+    color: rgb(6, 92, 92);
+}
+.ova .col-info h1,
+.season .col-info h1{
+    font-size: 14px;
+    color: white;
+    font-family: "poppins";
+    
+}
+footer{    
+    background-color: rgb(29, 29, 29);
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(80, 80, 80) ;
+}
+footer a{
+    margin: .6em;
+}
+footer img{
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px black;
+}
+footer img:hover{
+    transform: scale(1.3);
+}
+
+@media(max-width: 499px){
+    .col-info-text{
+        position: relative;
+    }
+    .col-info-text::before{
+        content: "";
+        position: absolute;
+        bottom:  10px;
+        border-bottom: 1px solid rgb(67, 67, 67);
+        width: 100%;
+    }
+}
+@media(min-width: 500px){
+    .col-text{
+        padding-top: 5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .col-info-text{    
+    }
+    .col-text{
+        position: relative;
+    }
+    .col-text::before{
+        content: "";
+        position: absolute;
+        top: 140px;
+        border-bottom: 1px solid rgb(67, 67, 67);
+        width: 100%;
+    }
+    .link {
+        margin-top: 2em;
+        
+    }
+    .container{
+        position: relative;
+        width: 500px;
+        margin: auto;
+        overflow: hidden;
+        background-color: black;
+    }
+    header{
+        width: 500px;
+    }
+    body{
+        background-color: white;
+    }
+}
